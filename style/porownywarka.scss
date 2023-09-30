@@ -6,6 +6,7 @@ nav {
 img {
     height: 18vh;
     border: 1px solid red;
+    width: 100%;
 }
 
 main {
@@ -14,7 +15,7 @@ main {
     flex-flow: row;
 
     #lewy {
-        border: 10px solid red;
+        border: 1px solid red;
         flex: 1;
         background: green;
         display: inline;
@@ -22,7 +23,7 @@ main {
     }
 
     #prawy {
-        border: 10px solid red;
+        border: 1px solid red;
         flex: 1;
         display: inline;
         height: 100%;
