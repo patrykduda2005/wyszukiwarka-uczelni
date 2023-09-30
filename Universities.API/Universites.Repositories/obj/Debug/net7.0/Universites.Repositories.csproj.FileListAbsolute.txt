@@ -1,0 +1,14 @@
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\bin\Debug\net7.0\Universites.Repositories.deps.json
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\bin\Debug\net7.0\Universites.Repositories.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\bin\Debug\net7.0\Universites.Repositories.pdb
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.csproj.AssemblyReference.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.AssemblyInfoInputs.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.AssemblyInfo.cs
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\refint\Universites.Repositories.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.pdb
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\ref\Universites.Repositories.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\bin\Debug\net7.0\Universites.Repositories.runtimeconfig.json
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universites.Repositories\obj\Debug\net7.0\Universites.Repositories.genruntimeconfig.cache

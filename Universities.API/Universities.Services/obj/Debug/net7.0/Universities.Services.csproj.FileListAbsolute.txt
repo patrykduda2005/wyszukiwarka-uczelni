@@ -1,0 +1,17 @@
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universities.Services.deps.json
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universities.Services.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universities.Services.pdb
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universites.Repositories.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universites.Repositories.pdb
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.csproj.AssemblyReference.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.AssemblyInfoInputs.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.AssemblyInfo.cs
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.csproj.CoreCompileInputs.cache
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.csproj.CopyComplete
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\refint\Universities.Services.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.pdb
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\ref\Universities.Services.dll
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\bin\Debug\net7.0\Universities.Services.runtimeconfig.json
+C:\Users\krzys\source\repos\patrykduda2005\wyszukiwarka-uczelni\Universities.API\Universities.Services\obj\Debug\net7.0\Universities.Services.genruntimeconfig.cache
