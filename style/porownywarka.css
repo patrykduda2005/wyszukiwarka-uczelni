@@ -14,6 +14,7 @@ main {
   display: flex;
   flex-flow: row;
 }
+
 main #lewy {
   border: 1px solid red;
   flex: 1;
@@ -21,9 +22,11 @@ main #lewy {
   display: inline;
   height: 100%;
 }
+
 main #prawy {
   border: 1px solid red;
   flex: 1;
+  color: white;
   display: inline;
   height: 100%;
 }
