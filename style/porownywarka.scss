@@ -1,0 +1,31 @@
+nav {
+    height: 15vh;
+    border: 1px solid red;
+}
+
+img {
+    height: 18vh;
+    border: 1px solid red;
+}
+
+main {
+    height: 66vh;
+    display: flex;
+    flex-flow: row;
+
+    #lewy {
+        border: 10px solid red;
+        flex: 1;
+        background: green;
+        display: inline;
+        height: 100%;
+    }
+
+    #prawy {
+        border: 10px solid red;
+        flex: 1;
+        display: inline;
+        height: 100%;
+    }
+
+}
