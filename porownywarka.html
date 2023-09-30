@@ -1,19 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Porównywarka</title>
     <link rel="stylesheet" href="style/porownywarka.css">
     <link rel="stylesheet" href="style/ogolne.css">
 </head>
+<script>
+
+
+    var tab = new Array("uniwersytet rzesz", "uniwersytet warsz", "kut");
+    function getInPlacel(x) {
+        document.getElementById("searchl").innerHTML = "";
+        document.getElementById("search1").value = x.innerHTML;
+    }
+    function getInPlacep(x) {
+        document.getElementById("searchp").innerHTML = "";
+        document.getElementById("search2").value = x.innerHTML;
+    }
+    function search() {
+        document.getElementById("searchl").innerHTML = "";
+
+        var zmienna = new Array();
+
+        tab.forEach(element => {
+            let jacek = element.toString()
+            if (jacek.includes(document.getElementById("search1").value)) {
+                zmienna.push(jacek)
+            }
+        });
+        zmienna.forEach(element => {
+            document.getElementById("searchl").innerHTML += "<div class='searchresult' value='" + element + "' onclick='getInPlacel(this)'>" + element + "</div><br>"
+
+
+        });
+
+    }
+    function search2() {
+        document.getElementById("searchp").innerHTML = "";
+
+        var zmienna = new Array();
+
+        tab.forEach(element => {
+            let jacek = element.toString()
+            if (jacek.includes(document.getElementById("search2").value)) {
+                zmienna.push(jacek)
+            }
+        });
+        zmienna.forEach(element => {
+            document.getElementById("searchp").innerHTML += "<div class='searchresult' value='" + element + "' onclick='getInPlacep(this)'>" + element + "</div><br>"
+
+
+        });
+
+    }
+</script>
+
 <body>
     <nav>
-            menu + logo
+        <div class="wyszukiwarka">
+            <input type="text" placeholder="Szukaj !" onchange="">
+            <button onclick="">Szukaj</button>
+        </div>
+        <img src="govtech.png" alt="govtech">
+        <img src="search_loop.jpg" alt="searchloop" id="search" onclick="document.querySelector('.wyszukiwarka').style.display= 'none'">
     </nav>
     <img src="krzak_trollface.png" alt="jakis image">
+    <button>Porównaj</button>
     <main>
-        <div id="lewy">dfsf</div>
-        <div id="prawy">dfsf</div>
+        <div id="lewy">
+            <input type="text" id="search1" onkeydown="search()" onkeyup="search()" onkeypress="search()">
+            <div id="searchl"></div>
+        </div>
+        <div id="prawy">
+            <div id="lewy">
+                <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onkeypress="search2()">
+                <div id="searchp"></div>
+            </div>
+            <div id="czescwspolna"></div>
     </main>
 </body>
+
 </html>
