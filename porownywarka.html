@@ -67,17 +67,17 @@
         <img src="search_loop.jpg" alt="searchloop" id="search" onclick="document.querySelector('.wyszukiwarka').style.display= 'none'">
     </nav>
     <img src="krzak_trollface.png" alt="jakis image">
-    <button>Porównaj</button>
+    <div id="porownanie-container">
+        <input type="text" id="search1" onkeydown="search()" onkeyup="search()" onkeypress="search()">
+        <button>Porównaj</button>
+        <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onkeypress="search2()">
+    </div>
     <main>
         <div id="lewy">
-            <input type="text" id="search1" onkeydown="search()" onkeyup="search()" onkeypress="search()">
             <div id="searchl"></div>
         </div>
         <div id="prawy">
-            <div id="lewy">
-                <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onkeypress="search2()">
                 <div id="searchp"></div>
-            </div>
             <div id="czescwspolna"></div>
     </main>
 </body>
