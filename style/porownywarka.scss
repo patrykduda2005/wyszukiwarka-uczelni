@@ -7,6 +7,11 @@ img {
     height: 24vh;
     border: 1px solid red;
     width: 100%;
+    object-fit: cover;
+}
+
+#porownanie-container {
+    text-align: center;
 }
 
 main {
@@ -28,6 +33,7 @@ main {
         color: white;
         display: inline;
         height: 100%;
+        text-align: right;
     }
 
 }
