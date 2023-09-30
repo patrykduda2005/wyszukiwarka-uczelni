@@ -13,10 +13,6 @@ img {
   text-align: center;
 }
 
-#prawy {
-  text-align: right;
-}
-
 main {
   height: 66vh;
   display: flex;
@@ -35,6 +31,7 @@ main #prawy {
   color: white;
   display: inline;
   height: 100%;
+  text-align: right;
 }
 
 /*# sourceMappingURL=porownywarka.css.map */
