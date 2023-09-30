@@ -2,29 +2,22 @@ body {
   background: black;
 }
 
-nav header .flex-container {
-  height: 2em;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+nav {
+  text-align: center;
 }
-nav header .flex-container input {
-  width: 66%;
-  border: 1px solid red;
-  height: 100%;
-}
-nav header .flex-container div {
-  display: flex;
-  height: 100px;
-  border-radius: 0px;
-  background: red;
-}
-nav header .flex-container div button {
-  background: red;
-}
-nav header .flex-container div img {
+nav img {
+  width: initial;
+  height: 10vh;
   float: right;
-  height: 100%;
+}
+nav #search {
+  float: none;
+  height: 3em;
+  margin-top: 2em;
+}
+
+.wyszukiwarka {
+  display: inline;
 }
 
 /*# sourceMappingURL=ogolne.css.map */
