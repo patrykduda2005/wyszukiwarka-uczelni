@@ -1,11 +1,9 @@
 nav {
     height: 10vh;
-    border: 1px solid red;
 }
 
 img {
     height: 24vh;
-    border: 1px solid red;
     width: 100%;
     object-fit: cover;
 }
@@ -18,22 +16,22 @@ main {
     height: 66vh;
     display: flex;
     flex-flow: row;
+    gap: 10px;
 
     #lewy {
-        border: 1px solid red;
-        flex: 1;
-        background: green;
-        display: inline;
-        height: 100%;
+        text-align: right;
     }
 
     #prawy {
-        border: 1px solid red;
+        text-align: left;
+    }
+
+    #prawy, #lewy {
         flex: 1;
-        color: white;
+        background: var(--kolor-glowny);
         display: inline;
         height: 100%;
-        text-align: right;
+        padding: 10px;
     }
 
 }
