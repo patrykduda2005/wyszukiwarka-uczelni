@@ -8,15 +8,16 @@
 </head>
 <body>
     <nav>
-        <header>
-            <div class="flex-container">
-                <input type="text" placeholder="Szukaj !" onchange="">
-                <div>
-                    <button onclick="">Szukaj</button>
-                    <img src="govtech.png" alt="govtech">
-                </div>
-            </div>
-        </header>
+        <img src="govtech.png" alt="govtech">
+            <img src="search_loop.jpg" alt="searchloop" id="search" onclick="
+                let jacek = document.querySelector('.wyszukiwarka');
+                if (jacek.style.opacity == 0) jacek.style.opacity= 1;
+                else jacek.style.opacity = 0;
+                "><br>
+        <div class="wyszukiwarka">
+            <input type="text" placeholder="Szukaj !" onchange="">
+            <button onclick="">Szukaj</button>
+        </div>
     </nav>
         <form action="">
             <input type="text" placeholder="Nazwa">
