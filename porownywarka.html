@@ -6,11 +6,66 @@
     <title>Porównywarka</title>
     <link rel="stylesheet" href="style/porownywarka.css">
     <link rel="stylesheet" href="style/ogolne.css">
+    <style>
+
+    </style>
 </head>
 <script>
 
+    var tab = new Array();
+    function load() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
 
-    var tab = new Array("uniwersytet rzesz", "uniwersytet warsz", "kut");
+
+        fetch("https://localhost:7208/Universities", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                result.forEach(element => {
+                    tab.push(element["name"])
+                    console.log(element["name"])
+
+                });
+            })
+            .catch(error => console.log('error', error));
+
+    }
+
+    function porownaj() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+
+        fetch("https://localhost:7208/Universities", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                result.forEach(element => {
+                    if (element["name"] == document.getElementById("search1").value) {
+                        document.getElementById("searchl").innerHTML += "Nazwa: " + element["name"] + "<br> Miasto: " + element["city"] + "<Br> Rektor: " + element["rectorName"] + "<br> Wydziały:  ";
+                        element["departments"].forEach(item => {
+                            document.getElementById("searchl").innerHTML += item["name"] + "<Br>";
+
+                        });
+
+                        document.getElementById("char").innerHTML += " <li style='grid-column: span " + element["ranking"] / 1000 + "'>" + element["name"] + ":     <span>" + element["ranking"] + "</span>  </li>"
+                    }
+                    if (element["name"] == document.getElementById("search2").value) {
+                        document.getElementById("char").innerHTML += " <li style='grid-column: span " + element["ranking"] / 1000 + "'> " + element["name"] + "<span>" + element["ranking"] + "</span>  </li>"
+                        document.getElementById("searchp").innerHTML = "Nazwa: " + element["name"] + "<br> Miasto: " + element["city"] + "<Br> Rektor: " + element["rectorName"] + "<br> Wydziały:  ";
+                        element["departments"].forEach(item => {
+                            document.getElementById("searchp").innerHTML += item["name"] + "<Br>";
+                        });
+                    }
+                    document.getElementById("sekcja").style.display = "block";
+                });
+            })
+            .catch(error => console.log('error', error));
+    }
+
     function getInPlacel(x) {
         document.getElementById("searchl").innerHTML = "";
         document.getElementById("search1").value = x.innerHTML;
@@ -57,23 +112,18 @@
     }
 </script>
 
-<body>
+
+
+<body onload="load()">
     <nav>
-        <img src="govtech.png" alt="govtech">
-            <img src="search_loop.jpg" alt="searchloop" id="search" onclick="
-                let jacek = document.querySelector('.wyszukiwarka');
-                if (jacek.style.opacity == 0) jacek.style.opacity= 1;
-                else jacek.style.opacity = 0;
-                "><br>
-        <div class="wyszukiwarka">
-            <input type="text" placeholder="Szukaj !" onchange="">
-            <button onclick="">Szukaj</button>
-        </div>
+
+        <img src="govtech.png" style="float:left;" alt="govtech" width="100%">
+
     </nav>
     <img src="dlugi_uniwersytet.jpeg" alt="jakis image">
     <div id="porownanie-container">
         <input type="text" id="search1" onkeydown="search()" onkeyup="search()" onkeypress="search()">
-        <button>Porównaj</button>
+        <button onclick="porownaj()">Porównaj</button>
         <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onkeypress="search2()">
     </div>
     <main>
@@ -81,9 +131,22 @@
             <div id="searchl"></div>
         </div>
         <div id="prawy">
-                <div id="searchp"></div>
-            <div id="czescwspolna"></div>
+            <div id="searchp"></div>
+
     </main>
+
+    <br>
+    <div id="czescwspolna">
+        <section id="sekcja" style="display: none;">
+            <h2>Wybrane uczelnie względem rankigu</h2>
+            <ul id="char" class=" chart">
+
+
+            </ul>
+        </section>
+        <div id="chartContainer" style="height: 300px; width: 100%;"> </div>
+
+    </div>
 </body>
 
 </html>

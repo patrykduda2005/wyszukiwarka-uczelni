@@ -1,11 +1,60 @@
 nav {
-  height: 10vh;
+  height: 20;
+
 }
 
 img {
-  height: 24vh;
+  height: 20px;
   width: 100%;
   object-fit: cover;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+section {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1.5rem 1.5rem 2rem;
+  border: 2px solid #a7a8aa;
+  border-radius: 0.5rem;
+  margin: auto;
+}
+
+h2 {
+  margin: 0 0 2.5rem;
+}
+
+.chart {
+  display: grid;
+  grid-template-columns: auto;
+  gap: .5em 0;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  grid-auto-columns: 1fr;
+}
+
+li {
+  background: #ffd100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem
+}
+
+li span {
+  font-weight: bold;
+}
+
+.searchresult {
+  background-color: azure;
 }
 
 #porownanie-container {
@@ -20,18 +69,23 @@ main {
   flex-flow: row;
   gap: 10px;
 }
+
 main #lewy {
   text-align: right;
+  margin-left: 2.5%
 }
+
 main #prawy {
   text-align: left;
 }
-main #prawy, main #lewy {
-  flex: 1;
-  background: var(--kolor-glowny);
-  display: inline;
-  height: 100%;
+
+main #prawy,
+main #lewy {
+  background-color: rgb(0, 98, 255);
+
+  width: 45%;
   padding: 10px;
 }
+
 
 /*# sourceMappingURL=porownywarka.css.map */

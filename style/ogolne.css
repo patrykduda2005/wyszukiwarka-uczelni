@@ -1,7 +1,9 @@
-body {
-  --kolor-glowny: #6A9CFF;
-  --kolor-akcentowany: #4D89FF;
-  --kolor-tlo: #A9C6FF;
+body,
+html {
+  margin: 0;
+  --kolor-glowny: #1d53c0;
+  --kolor-akcentowany: #1a2843;
+  --kolor-tlo: #768197;
   --kolor-kontrastujacy: #FFB539;
   background: var(--kolor-tlo);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -9,12 +11,14 @@ body {
 
 nav {
   text-align: center;
-  height: 13vh;
+
 }
+
 nav img {
   width: initial;
-  height: 10vh;
+
 }
+
 nav #search {
   float: none;
   height: 3em;
