@@ -11,5 +11,6 @@ namespace Universites.Repositories.Interfaces
     {
         Task<Department> CreateDepartment(Department departmentToCreate);
         Task<IEnumerable<Department>> ListDepartmentsByUniversity(string UniversityName);
+        Task<IEnumerable<Course>> ListCoursesForDep(Guid Id);
     }
 }

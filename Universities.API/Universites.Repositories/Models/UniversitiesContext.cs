@@ -20,7 +20,7 @@ namespace Universites.Repositories.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(
+            optionsBuilder.UseSqlServer("", b => b.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null));
             
             base.OnConfiguring(optionsBuilder);
 
