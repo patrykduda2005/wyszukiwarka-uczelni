@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link href="style/ogolne.css" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <img src="govtech.png" alt="govtech">
+            <img src="search_loop.jpg" alt="searchloop" id="search" onclick="
+                let jacek = document.querySelector('.wyszukiwarka');
+                if (jacek.style.opacity == 0) jacek.style.opacity= 1;
+                else jacek.style.opacity = 0;
+                "><br>
+        <div class="wyszukiwarka">
+            <input type="text" placeholder="Szukaj !" onchange="">
+            <button onclick="">Szukaj</button>
+        </div>
+    </nav>
+    
     
 </body>
 </html>

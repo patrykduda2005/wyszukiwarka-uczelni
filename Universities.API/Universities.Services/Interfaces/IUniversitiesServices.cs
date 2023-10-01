@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Universites.Repositories.Models;
+using Universities.Services.Models;
+
+namespace Universities.Services.Interfaces
+{
+    public interface IUniversitiesServices
+    {
+        Task<University> CreateUniversity(University universityToCreate);
+        Task<IEnumerable<UniversityDTO>> ListUniversities();
+    }
+}

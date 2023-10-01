@@ -1,0 +1,45 @@
+body,
+html {
+  margin: 0;
+  --kolor-glowny: #1d53c0;
+  --kolor-akcentowany: #1a2843;
+  --kolor-tlo: #768197;
+  --kolor-kontrastujacy: #FFB539;
+  background: var(--kolor-tlo);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+nav {
+  text-align: center;
+
+}
+
+nav img {
+  width: initial;
+
+}
+
+nav #search {
+  float: none;
+  height: 3em;
+  margin-top: 17px;
+}
+
+button {
+  border-radius: 0px;
+  border: none;
+  background: var(--kolor-akcentowany);
+}
+
+input {
+  border: 3px solid var(--kolor-akcentowany);
+  outline: none;
+}
+
+.wyszukiwarka {
+  display: inline-flex;
+  transition: all 2s;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=ogolne.css.map */

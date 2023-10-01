@@ -1,17 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Porównywarka</title>
+    <link rel="stylesheet" href="style/porownywarka.css">
+    <link rel="stylesheet" href="style/ogolne.css">
+    <style>
+
+    </style>
 </head>
-<body>
+<script>
+
+    var tab = new Array();
+    function load() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+
+
+        fetch("https://localhost:7208/Universities", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                result.forEach(element => {
+                    tab.push(element["name"])
+                    console.log(element["name"])
+
+                });
+            })
+            .catch(error => console.log('error', error));
+
+    }
+
+    function porownaj() {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+        document.getElementById("searchl").innerHTML = "";
+        document.getElementById("searchp").innerHTML = "";
+        fetch("https://localhost:7208/Universities", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                result.forEach(element => {
+                    if (element["name"] == document.getElementById("search1").value) {
+                        document.getElementById("searchl").innerHTML += "Nazwa: " + element["name"] + "<br> Miasto: " + element["city"] + "<Br> Rektor: " + element["rectorName"] + "<br> Wydziały:  ";
+                        element["departments"].forEach(item => {
+                            document.getElementById("searchl").innerHTML += item["name"] + "<Br>";
+
+                        });
+
+                        document.getElementById("char").innerHTML += " <li style='grid-column: span " + element["ranking"] / 1000 + "'>" + element["name"] + ":     <span>" + element["ranking"] + "</span>  </li>"
+                    }
+                    if (element["name"] == document.getElementById("search2").value) {
+                        document.getElementById("char").innerHTML += " <li style='grid-column: span " + element["ranking"] / 1000 + "'> " + element["name"] + "<span>" + element["ranking"] + "</span>  </li>"
+                        document.getElementById("searchp").innerHTML = "Nazwa: " + element["name"] + "<br> Miasto: " + element["city"] + "<Br> Rektor: " + element["rectorName"] + "<br> Wydziały:  ";
+                        element["departments"].forEach(item => {
+                            document.getElementById("searchp").innerHTML += item["name"] + "<Br>";
+                        });
+                    }
+                    document.getElementById("sekcja").style.display = "block";
+                });
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function getInPlacel(x) {
+        document.getElementById("searchl").innerHTML = "";
+        document.getElementById("search1").value = x.innerHTML;
+    }
+    function getInPlacep(x) {
+        document.getElementById("searchp").innerHTML = "";
+        document.getElementById("search2").value = x.innerHTML;
+    }
+    function search() {
+        document.getElementById("searchl").innerHTML = "";
+
+        var zmienna = new Array();
+
+        tab.forEach(element => {
+            let jacek = element.toString()
+            if (jacek.includes(document.getElementById("search1").value)) {
+                zmienna.push(jacek)
+            }
+        });
+        zmienna.forEach(element => {
+            document.getElementById("searchl").innerHTML += "<div class='searchresult' value='" + element + "' onclick='getInPlacel(this)'>" + element + "</div><br>"
+
+
+        });
+
+    }
+    function search2() {
+        document.getElementById("searchp").innerHTML = "";
+
+        var zmienna = new Array();
+
+        tab.forEach(element => {
+            let jacek = element.toString()
+            if (jacek.includes(document.getElementById("search2").value)) {
+                zmienna.push(jacek)
+            }
+        });
+        zmienna.forEach(element => {
+            document.getElementById("searchp").innerHTML += "<div class='searchresult' value='" + element + "' onclick='getInPlacep(this)'>" + element + "</div><br>"
+
+
+        });
+
+    }
+</script>
+
+
+
+<body onload="load()">
     <nav>
-            menu + logo
+
+
+        <p style="font-size: larger;font-weight: bold;">Twoje Uczelnie</p>
+        <button style="margin-bottom: 2%;">
+            <p style="font-size: 5px;font-weight: bold;">Dodaj Uczelnie (wkrótce)</p>
+        </button>
+
     </nav>
-    <img src="" alt="jakis image">
+    <img src="dlugi_uniwersytet.jpeg" alt="jakis image"><br><br>
+    <div id="porownanie-container">
+        <input type="text" id="search1" onkeydown="search()" onclick="search()" onkeyup="search()"
+            onkeypress="search()">
+        <button onclick="porownaj()">Porównaj</button>
+        <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onclick="search2()"
+            onkeypress="search2()">
+    </div><br>
     <main>
-        <div id="lewy"></div>
-        <div id="prawy"></div>
+        <div id="lewy">
+            <div id="searchl"></div>
+        </div>
+        <div id="prawy">
+            <div id="searchp"></div>
+
     </main>
+
+    <br>
+    <div id="czescwspolna">
+        <section id="sekcja" style="display: none;">
+            <h2>Wybrane uczelnie względem rankigu</h2>
+            <ul id="char" class=" chart">
+
+
+            </ul>
+        </section>
+        <div id="chartContainer" style="height: 300px; width: 100%;"> </div>
+
+    </div>
 </body>
+
 </html>

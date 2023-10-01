@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="style/ogolne.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/dodaj_uczelnie.css">
+</head>
+<body>
+    <nav>
+        <img src="govtech.png" alt="govtech">
+            <img src="search_loop.jpg" alt="searchloop" id="search" onclick="
+                let jacek = document.querySelector('.wyszukiwarka');
+                if (jacek.style.opacity == 0) jacek.style.opacity= 1;
+                else jacek.style.opacity = 0;
+                "><br>
+        <div class="wyszukiwarka">
+            <input type="text" placeholder="Szukaj !" onchange="">
+            <button onclick="">Szukaj</button>
+        </div>
+    </nav>
+        <form action="">
+            <input type="text" placeholder="Nazwa">
+            <input type="text" placeholder="Miasto">
+            <input type="text" placeholder="Imie i nazwisko">
+            <input type="date" placeholder="data zalozenia">
+            <input list="wydzialy" placeholder="wydzialy">
+            <datalist id="wydzialy">
+                <option value="Woźny"></option>
+                <option value="Programista"></option>
+                <option value="AndrzejDuda"></option>
+                <option value="Sprzątacz"></option>
+                <option value="Valorant"></option>
+            </datalist>
+            <button>Wyslij</button>
+        </form>
+</body>
+</html>
