@@ -12,5 +12,8 @@ namespace Universites.Repositories.Interfaces
         Task<University> CreateUniversity(University universityToCreate);
         Task<IEnumerable<University>> ListUniversities();
 
+        Task<IEnumerable<Department>> ListDepartamentsForUni(Guid Id);
+        Task<IEnumerable<Course>> ListCoursesForDep(Guid Id);
+
     }
 }
