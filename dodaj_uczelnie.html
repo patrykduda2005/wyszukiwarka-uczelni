@@ -8,12 +8,15 @@
 </head>
 <body>
     <nav>
-        <div class="wyszukiwarka">
-            <input type="text" placeholder="Szukaj !" onchange="">
-            <button onclick="">Szukaj</button>
-        </div>
-        <img src="govtech.png" alt="govtech">
-        <img src="search_loop.jpg" alt="searchloop" id="search" onclick="document.querySelector('.wyszukiwarka').style.display= 'none'">
+        <header>
+            <div class="flex-container">
+                <input type="text" placeholder="Szukaj !" onchange="">
+                <div>
+                    <button onclick="">Szukaj</button>
+                    <img src="govtech.png" alt="govtech">
+                </div>
+            </div>
+        </header>
     </nav>
         <form action="">
             <input type="text" placeholder="Nazwa">
