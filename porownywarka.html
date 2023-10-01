@@ -59,12 +59,16 @@
 
 <body>
     <nav>
+        <img src="govtech.png" alt="govtech">
+            <img src="search_loop.jpg" alt="searchloop" id="search" onclick="
+                let jacek = document.querySelector('.wyszukiwarka');
+                if (jacek.style.opacity == 0) jacek.style.opacity= 1;
+                else jacek.style.opacity = 0;
+                "><br>
         <div class="wyszukiwarka">
             <input type="text" placeholder="Szukaj !" onchange="">
             <button onclick="">Szukaj</button>
         </div>
-        <img src="govtech.png" alt="govtech">
-        <img src="search_loop.jpg" alt="searchloop" id="search" onclick="document.querySelector('.wyszukiwarka').style.display= 'none'">
     </nav>
     <img src="dlugi_uniwersytet.jpeg" alt="jakis image">
     <div id="porownanie-container">
