@@ -9,11 +9,11 @@ body {
 
 nav {
   text-align: center;
+  height: 13vh;
 }
 nav img {
   width: initial;
   height: 10vh;
-  float: right;
 }
 nav #search {
   float: none;
