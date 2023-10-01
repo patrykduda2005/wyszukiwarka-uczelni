@@ -38,8 +38,8 @@
             method: 'GET',
             redirect: 'follow'
         };
-
-
+        document.getElementById("searchl").innerHTML = "";
+        document.getElementById("searchp").innerHTML = "";
         fetch("https://localhost:7208/Universities", requestOptions)
             .then(response => response.json())
             .then(result => {
@@ -117,15 +117,21 @@
 <body onload="load()">
     <nav>
 
-        <img src="govtech.png" style="float:left;" alt="govtech" width="100%">
+
+        <p style="font-size: larger;font-weight: bold;">Twoje Uczelnie</p>
+        <button style="margin-bottom: 2%;">
+            <p style="font-size: 5px;font-weight: bold;">Dodaj Uczelnie (wkrótce)</p>
+        </button>
 
     </nav>
-    <img src="dlugi_uniwersytet.jpeg" alt="jakis image">
+    <img src="dlugi_uniwersytet.jpeg" alt="jakis image"><br><br>
     <div id="porownanie-container">
-        <input type="text" id="search1" onkeydown="search()" onkeyup="search()" onkeypress="search()">
+        <input type="text" id="search1" onkeydown="search()" onclick="search()" onkeyup="search()"
+            onkeypress="search()">
         <button onclick="porownaj()">Porównaj</button>
-        <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onkeypress="search2()">
-    </div>
+        <input type="text" id="search2" onkeydown="search2()" onkeyup="search2()" onclick="search2()"
+            onkeypress="search2()">
+    </div><br>
     <main>
         <div id="lewy">
             <div id="searchl"></div>

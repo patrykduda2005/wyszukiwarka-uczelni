@@ -1,10 +1,5 @@
-nav {
-  height: 20;
-
-}
-
 img {
-  height: 20px;
+  height: 40px;
   width: 100%;
   object-fit: cover;
 }
@@ -54,6 +49,7 @@ li span {
 }
 
 .searchresult {
+  text-align: center;
   background-color: azure;
 }
 
@@ -72,7 +68,7 @@ main {
 
 main #lewy {
   text-align: right;
-  margin-left: 2.5%
+  margin-left: 4%
 }
 
 main #prawy {
@@ -81,11 +77,18 @@ main #prawy {
 
 main #prawy,
 main #lewy {
-  background-color: rgb(0, 98, 255);
+  background-color: rgb(68, 109, 177);
 
   width: 45%;
   padding: 10px;
 }
 
+button {
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=porownywarka.css.map */
