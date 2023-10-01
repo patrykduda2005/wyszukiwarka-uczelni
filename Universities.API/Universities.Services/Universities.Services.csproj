@@ -19,8 +19,4 @@
     <ProjectReference Include="..\Universites.Repositories\Universites.Repositories.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 </Project>

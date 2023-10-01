@@ -40,5 +40,9 @@ namespace Universites.Repositories.Repositories
             return departmentToCreate;
 
         }
+        public async Task<IEnumerable<Course>> ListCoursesForDep(Guid Id)
+        {
+            return await _context.Courses.Where(d => d.DepartmentID == Id).ToListAsync();
+        }
     }
 }

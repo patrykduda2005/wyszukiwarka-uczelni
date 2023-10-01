@@ -16,7 +16,7 @@ namespace Universities.API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Course>>> GetDepartmentsByUniversity(string dName,string uName)
+        public async Task<ActionResult<IEnumerable<Course>>> GetCourses(string dName,string uName)
         {
             if (await _service.ListCoursesByDepartment(dName,uName) == null)
             {
@@ -27,7 +27,7 @@ namespace Universities.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<IEnumerable<Course>>> PostDepartments(string Name, string Description, string experienceAfter,string level, Guid departmentID)
+        public async Task<ActionResult<IEnumerable<Course>>> PostCourses(string Name, string Description, string experienceAfter,string level, Guid departmentID)
         {
             Course course = new Course();
             course.Name = Name;
@@ -36,12 +36,13 @@ namespace Universities.API.Controllers
             course.Level = level;
             course.DepartmentID = departmentID;
             course.Id = Guid.NewGuid();
-            if (await _service.CreateCourse(course) == null)
+            Course result = await _service.CreateCourse(course);
+            if (result == null)
             {
                 return NotFound();
             }
 
-            return Ok(await _service.CreateCourse(course));
+            return Ok(result);
         }
     }
 }

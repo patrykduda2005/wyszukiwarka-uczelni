@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
+using Universites.Repositories.Models;
 
-namespace Universites.Repositories.Models
+namespace Universities.Services.Models
 {
-    public class Course
+    public class CourseDTO
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
@@ -16,7 +16,6 @@ namespace Universites.Repositories.Models
         public string Level { get; set; }
 
         public Guid DepartmentID { get; set; }
-        public virtual Department Department { get; set; }
 
     }
 }
